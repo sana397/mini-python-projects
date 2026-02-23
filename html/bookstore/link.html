@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bookstore demo</title>
+<style>
+
+    table.collapsed { border-collapse: collapse; width: 100%; }
+    table.collapsed, table.collapsed th, table.collapsed td { border: 2px solid hotpink; }
+
+
+    table.invisible { border-collapse: collapse; width: 100%; }
+    table.invisible, table.invisible th, table.invisible td { border: none; }
+    table.invisible th, table.invisible td { padding: 8px; background-color: aqua; }
+
+
+    th, td { padding: 8px; text-align: left; }
+ 
+
+    table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+    }
+
+    /* Rounded table style for bookstore inventory */
+    table.rounded {
+        border-collapse: separate; /* allow rounded corners */
+        border-spacing: 0;
+        width: 100%;
+        border: 2px solid #6a5acd;
+        border-radius: 12px;
+        overflow: hidden;
+        background-clip: padding-box;
+    }
+    table.rounded thead th {
+        background-color: #6a5acd;
+        color: #fff;
+        padding: 12px 8px;
+    }
+    table.rounded tbody td {
+        padding: 10px 8px;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        background: linear-gradient(180deg,#fff,#fafafa);
+    }
+    table.rounded tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+</style>
+</head>
+</style>
+</head>
+    <body style = "background-color: powderblue;">
+        <link rel="icon" type="image/x-icon" href="index.html">
+        <!--this is a comment-->
+        <p>This <!-- great text --> is a paragraph.</p>
+        <p><a href="https://www.google.com/" target="_blank">Google</a></p>
+        <h1 style="background-color:DodgerBlue;">Hello World</h1>
+        <p style="background-color:Tomato;">Lorem ipsum...</p>
+        <h1 style="border:2px solid Tomato;">Hello World</h1>
+        <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+        <h1 style = "font-size: 60px;">heading 1 </h1>
+        <h1 style="font-family:verdana;">This is a heading</h1>
+        <p style="font-family:courier;">This is a paragraph.</p>
+        <b> this text is bold .</b><br>
+        <strong> this text is strong!!</strong><br>
+        <i> this is italiac type</i><br>
+        <em> this  is emphasized text </em><br>
+        <small>this is smaller text</small><br>
+        <p> do not forget to code <mark>html</mark></p><br>
+        <p> the <del>heading</del><ins> heading2</ins></p>
+        <p> this is <sup> superscripted</sup> and <sub> subscripted</sub></p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.</blockquote>
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        <p style="font-family: 'Pacifico', cursive;">This is a paragraph in a stylish font.</p>
+        <img src="img_the_scream.jpg" width="220" height="277" alt="The Scream">
+        <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+        <bdo dir="rtl">This text will be written from right to left</bdo>
+        <h2 style = "text-align: center;"> the link for something</h2>
+        <p style = "text-align: center;"> here is the link</p>
+        <p style = "color: rgb(79, 75, 83);"> this is the coloured paragraph</p>
+        <a href = "https://www.anjani.com"> visit link</a>
+        <p> now html image</p>
+        <img src = "img_girl.jpg" width = "500" height = "600">
+        <p> <a  href = "#C4">jump to chapter 7</a></p>
+        <h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 2</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 3</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2 id="C4">Chapter 4</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 5</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 6</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 7</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Company contacts (collapsed borders)</h2>
+<table class="collapsed">
+<thead>
+    <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    </tr>
+    <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+    </tr>
+</tbody>
+</table>
+
+<h2>Border-collapse example</h2>
+<table class="collapsed">
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Birth month</th>
+    <th>Birth place</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td style="color: blue;">anjani</td>
+    <td style="color: blue;">February</td>
+    <td style="color: blue;">palasa</td>
+    </tr>
+    <tr>
+    <td style="color: blueviolet;">abhishek</td>
+    <td style="color: blueviolet;">July</td>
+    <td style="color: blueviolet;">palasa</td>
+    </tr>
+</tbody>
+</table>
+
+<h2>Invisible border table</h2>
+<table class="invisible">
+<thead>
+    <tr>
+    <th style="color: orangered;">Name</th>
+    <th style="color: orangered;">Birth month</th>
+    <th style="color: orangered;">Place</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td style="color: coral;">anjani</td>
+    <td style="color: coral;">February</td>
+    <td style="color: coral;">palasa</td>
+    </tr>
+    <tr>
+    <td style="color: coral;">nithya</td>
+    <td style="color: coral;">October</td>
+    <td style="color: coral;">hyderabad</td>
+    </tr>
+    <tr>
+    <td style="color: coral;">bhavani</td>
+    <td style="color: coral;">December</td>
+    <td style="color: coral;">vizag</td>
+    </tr>
+</tbody>
+</table>
+
+<h2>Rounded table — Book Inventory</h2>
+<table class="rounded" aria-label="Book inventory">
+<caption style="text-align:left; font-style:italic; margin-bottom:6px;">Sample bookstore inventory (rounded style)</caption>
+<thead>
+    <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Genre</th>
+    <th>Price</th>
+    <th>Stock</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td>9780140449136</td>
+    <td>The Odyssey</td>
+    <td>Homer</td>
+    <td>Classic</td>
+    <td>$12.99</td>
+    <td>24</td>
+    </tr>
+    <tr>
+    <td>9780590353427</td>
+    <td>Harry Potter and the Sorcerer's Stone</td>
+    <td>J.K. Rowling</td>
+    <td>Fantasy</td>
+    <td>$9.99</td>
+    <td>12</td>
+    </tr>
+    <tr>
+    <td>9781982137274</td>
+    <td>The Silent Patient</td>
+    <td>Alex Michaelides</td>
+    <td>Thriller</td>
+    <td>$14.50</td>
+    <td>8</td>
+    </tr>
+    <tr>
+    <td>9781501128035</td>
+    <td>The Goldfinch</td>
+    <td>Donna Tartt</td>
+    <td>Fiction</td>
+    <td>$11.00</td>
+    <td>5</td>
+    </tr>
+</tbody>
+</table>
+
+
+    </body>
+</html>

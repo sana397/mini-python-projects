@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country and Capital</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function showCapital() {
+        var capitals = {
+            India: 'New Delhi',
+            USA: 'Washington, D.C.',
+            France: 'Paris',
+            Japan: 'Tokyo',
+            Australia: 'Canberra'
+        };
+        var country = document.getElementById('country').value;
+        document.getElementById('capital').innerHTML = capitals[country] || '';
+    }
+    </script>
+</head>
+<body>
+    <h2>Select a Country</h2>
+    <select id="country" onchange="showCapital()">
+        <option value="">--Select--</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="France">France</option>
+        <option value="Japan">Japan</option>
+        <option value="Australia">Australia</option>
+    </select>
+    <span id="capital" class="capital"></span>
+</body>
+</html>

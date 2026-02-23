@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="register.js"></script>
+    <style>form { max-width: 400px; margin: 2em auto; }</style>
+</head>
+<body>
+    <h2>Registration</h2>
+    <form name="regForm" onsubmit="return validateForm()">
+        <label>First Name: <input type="text" name="fname"></label><br>
+        <label>Last Name: <input type="text" name="lname"></label><br>
+        <label>Password: <input type="password" name="password"></label><br>
+        <label>Email: <input type="text" name="email"></label><br>
+        <label>Mobile: <input type="text" name="mobile"></label><br>
+        <label>Address: <input type="text" name="address"></label><br>
+        <input type="submit" value="Register">
+    </form>
+    <div id="regMsg" style="color:red;"></div>
+</body>
+</html>

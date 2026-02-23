@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Technologies - Detailed Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <style>pre { background: #f4f4f4; padding: 1em; border-radius: 5px; } h2 { color: #2a5d9f; }</style>
+</head>
+<body>
+    <h1>Web Technologies - Detailed Guide</h1>
+    <h2>1. Static Web Pages for Online Book Store</h2>
+    <h3>a) Home Page with Frames</h3>
+    <p>Frames allow you to divide the browser window into multiple sections, each displaying a different HTML document. The <code>&lt;frameset&gt;</code> tag replaces the <code>&lt;body&gt;</code> tag when used. Example:</p>
+    <pre><code>&lt;frameset rows="20%,80%"&gt;
+  &lt;frame src="header.html"&gt;
+  &lt;frameset cols="20%,80%"&gt;
+    &lt;frame src="menu.html"&gt;
+    &lt;frame src="welcome.html"&gt;
+  &lt;/frameset&gt;
+&lt;/frameset&gt;</code></pre>
+    <p><b>Note:</b> Frames are outdated and not recommended for modern web design, but are still used for learning purposes.</p>
+
+    <h3>b) Login Page</h3>
+    <p>A login page typically contains a form with username and password fields. Example:</p>
+    <pre><code>&lt;form&gt;
+  Username: &lt;input type="text" name="username"&gt;&lt;br&gt;
+  Password: &lt;input type="password" name="password"&gt;&lt;br&gt;
+  &lt;input type="submit" value="Login"&gt;
+&lt;/form&gt;</code></pre>
+
+    <h3>c) Catalogue Page</h3>
+    <p>The catalogue page uses an HTML table to display book details. Example:</p>
+    <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Book 1&lt;/td&gt;&lt;td&gt;Author 1&lt;/td&gt;&lt;td&gt;$10&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+    <h3>d) Registration Page</h3>
+    <p>The registration page collects user information using a form. Example:</p>
+    <pre><code>&lt;form&gt;
+  First Name: &lt;input type="text" name="fname"&gt;&lt;br&gt;
+  ...
+&lt;/form&gt;</code></pre>
+
+    <h2>2. JavaScript Validation (Registration)</h2>
+    <p>JavaScript is used to validate form fields before submission. Example checks:</p>
+    <ul>
+      <li>First Name: Only alphabets, at least 6 characters</li>
+      <li>Password: At least 6 characters</li>
+      <li>Email: Must match pattern <code>name@domain.com</code></li>
+      <li>Mobile: Exactly 10 digits</li>
+      <li>Last Name and Address: Not empty</li>
+    </ul>
+    <pre><code>// First Name
+if (!/^[A-Za-z]{6,}$/.test(fname)) { ... }
+// Password
+if (password.length &lt; 6) { ... }
+// Email
+if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) { ... }
+// Mobile
+if (!/^\d{10}$/.test(mobile)) { ... }
+// Last Name/Address
+if (lname.trim() === "") { ... }
+if (address.trim() === "") { ... }</code></pre>
+
+    <h2>3. CSS Usage</h2>
+    <p>CSS styles HTML elements. There are three ways to use CSS:</p>
+    <ul>
+      <li><b>Inline:</b> Directly in the tag: <code>&lt;h1 style="color:blue;"&gt;Title&lt;/h1&gt;</code></li>
+      <li><b>Internal:</b> In a <code>&lt;style&gt;</code> block in the <code>&lt;head&gt;</code>:</li>
+    </ul>
+    <pre><code>&lt;style&gt; h1 { color: blue; } &lt;/style&gt;</code></pre>
+    <ul><li><b>External:</b> In a separate file (e.g., style.css): <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li></ul>
+
+    <h2>4. JavaScript Pop-ups and Functions</h2>
+    <p>JavaScript can interact with users using pop-ups and functions:</p>
+    <ul>
+      <li><b>Display Date:</b> <code>document.getElementById('datebox').value = new Date().toLocaleString();</code></li>
+      <li><b>Factorial:</b> Use <code>prompt()</code> to get input, calculate factorial, show with <code>alert()</code></li>
+      <li><b>Multiplication Table:</b> Use <code>prompt()</code> and <code>alert()</code> to display table</li>
+      <li><b>Sum Numbers:</b> Use <code>prompt()</code> in a loop, sum, show with <code>alert()</code></li>
+    </ul>
+    <pre><code>var n = prompt('Enter n:');
+var f = 1; for (var i=1;i&lt;=n;i++) f*=i; alert(f);</code></pre>
+
+    <h2>5. Country/Capital Selection (with CSS)</h2>
+    <p>Use a <code>&lt;select&gt;</code> dropdown and JavaScript to show the capital. Style the output with CSS:</p>
+    <pre><code>&lt;select id="country" onchange="showCapital()"&gt;...&lt;/select&gt;
+&lt;span id="capital" class="capital"&gt;&lt;/span&gt;
+.capital { color: brown; font-weight: bold; font-size: 1.2em; }</code></pre>
+
+    <h2>6. Number to Words (JS)</h2>
+    <p>Validate input (0-999), then convert to words using a function. Example:</p>
+    <pre><code>if (!/^[0-9]{1,3}$/.test(n)) { alert('0-999 only!'); }
+// Convert number to words (see number2words.html for function)</code></pre>
+
+    <h2>7. PHP/Java/XML (Syntax Only)</h2>
+    <p>PHP and Java require a server. Example PHP for sum of digits:</p>
+    <pre><code>$sum = 0; $n = 123; while ($n &gt; 0) { $sum += $n % 10; $n = (int)($n/10); }</code></pre>
+    <p>XML for users:</p>
+    <pre><code>&lt;users&gt;
+  &lt;user id="1"&gt;...&lt;/user&gt;
+  ...
+&lt;/users&gt;</code></pre>
+    <p>Java: Use DOM/SAX parser to read XML (see Java docs).</p>
+
+    <h2>8. Web Apps with PHP/Servlet/JSP (Syntax Only)</h2>
+    <p>PHP, JSP, and Servlets are used for server-side programming. Example:</p>
+    <pre><code>// PHP: $_POST['name'], session_start(), $_SESSION['start_time']
+// JSP: &lt;%= request.getParameter("name") %&gt;
+// Servlet: request.getParameter("name")
+// Cookie: document.cookie (JS), $_COOKIE (PHP)</code></pre>
+
+    <h2>9. Calculator (JS)</h2>
+    <p>Simple calculator using JavaScript:</p>
+    <pre><code>function calc(op) {
+  var a = parseFloat(document.getElementById('a').value);
+  var b = parseFloat(document.getElementById('b').value);
+  var res;
+  switch(op) { case '+': res = a+b; break; ... }
+  document.getElementById('result').value = res;
+}</code></pre>
+
+    <h2>Tips</h2>
+    <ul>
+      <li>Open each HTML file in your browser to see it in action.</li>
+      <li>Use browser developer tools (F12) to inspect and debug HTML/CSS/JS.</li>
+      <li>Practice editing and extending the examples for deeper understanding.</li>
+    </ul>
+</body>
+</html>

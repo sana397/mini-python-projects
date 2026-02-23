@@ -1,0 +1,18 @@
+a = int(input("enter the number a:"))
+b = int(input("enterr the number b:"))
+print(a+b)
+print(a-b)
+print(a*b)
+print(a%b)
+print(a/b)
+print("2nd question from day1")
+print("temperture convertor from celcius to fahrenheit")
+c = float(input("enter the celcius:"))
+f = (9/5) * c +32
+print(f)
+print("3rd simple interest calculator")
+p = int(input("enter the principal:"))
+r = int(input("enter the rate:"))
+t = int(input("enter the time:"))
+s = (p * r * t)/100
+print(s)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function showDate() {
+        document.getElementById('datebox').value = new Date().toLocaleString();
+    }
+    function factorial() {
+        var n = prompt('Enter a number:');
+        var f = 1;
+        for (var i = 1; i <= n; i++) f *= i;
+        alert('Factorial: ' + f);
+    }
+    function multTable() {
+        var n = prompt('Enter a number:');
+        var out = '';
+        for (var i = 1; i <= 10; i++) out += n + ' x ' + i + ' = ' + (n*i) + '\n';
+        alert(out);
+    }
+    function sumNumbers() {
+        var n = prompt('How many numbers?');
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var num = parseInt(prompt('Enter number ' + (i+1)));
+            sum += num;
+        }
+        alert('Sum: ' + sum);
+    }
+    </script>
+</head>
+<body>
+    <h2>JavaScript Pop-up Demo</h2>
+    <button onclick="showDate()">Display Date</button>
+    <input type="text" id="datebox" readonly><br><br>
+    <button onclick="factorial()">Factorial (Prompt)</button><br><br>
+    <button onclick="multTable()">Multiplication Table (Prompt)</button><br><br>
+    <button onclick="sumNumbers()">Sum Numbers (Prompt + Confirm)</button>
+</body>
+</html>
